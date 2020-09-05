@@ -1,0 +1,46 @@
+test:
+   workers:
+    type: local
+    number: 15
+   rounds:
+   - label: createAssetFixedbacklog-50
+     description: Query asset benchmark
+     chaincodeId: fabcar
+     txDuration: 300
+     rateControl:
+       type: fixed-backlog
+       opts:
+         unfinished_per_client: 50
+         startingTps: 100
+         #tps: 1
+         #finishingTps: 1000
+     callback: benchmarks/samples/fabric/fabcar/createCarCorrected.js
+     arguments:
+       assets: 2
+monitor:
+  type:
+  - docker
+  docker:
+    containers:
+    - http://192.168.0.1:2375/peer0.org1.example.com
+    - http://192.168.0.2:2375/peer1.org1.example.com
+    - http://192.168.0.3:2375/peer0.org2.example.com
+    - http://192.168.0.4:2375/peer1.org2.example.com
+    - http://192.168.0.1:2375/orderer.example.com
+    - http://192.168.0.1:2375/orderer5.example.com
+    - http://192.168.0.2:2375/orderer2.example.com
+    - http://192.168.0.3:2375/orderer3.example.com
+    - http://192.168.0.4:2375/orderer4.example.com
+    - http://192.168.0.1:2375/dev-peer0.org1.example.com-fabcar-1.0
+    - http://192.168.0.2:2375/dev-peer1.org1.example.com-fabcar-1.0
+    - http://192.168.0.3:2375/dev-peer0.org2.example.com-fabcar-1.0
+    - http://192.168.0.4:2375/dev-peer1.org2.example.com-fabcar-1.0
+
+
+
+
+
+  
+observer:
+  type: local
+  interval: 5
