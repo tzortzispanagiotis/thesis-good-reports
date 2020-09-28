@@ -2,7 +2,7 @@
 
 sudo apt-get update
 sudo apt-get upgrade
-
+cd ~
 sudo apt install curl
 echo "installing Docker..."
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -37,6 +37,6 @@ sudo apt-get install -y nodejs
 node --version
 
 cd ~
-curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.8 1.4.8 0.4.21
+curl -sSL http://bit.ly/2ysbOFE | sudo bash -s -- 1.4.8 1.4.8 0.4.21
 
 
