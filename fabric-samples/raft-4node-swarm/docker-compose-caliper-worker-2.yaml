@@ -7,130 +7,142 @@ networks:
 
 services:
   caliper_worker_10:
-    container_name: caliper_w_11
+    container_name: caliper_w_10
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
   caliper_worker_11:
-    container_name: caliper_w_12
+    container_name: caliper_w_11
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
   caliper_worker_12:
-    container_name: caliper_w_13
+    container_name: caliper_w_12
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
   caliper_worker_13:
-    container_name: caliper_w_14
+    container_name: caliper_w_13
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
-
   caliper_worker_14:
-    container_name: caliper_w_15
+    container_name: caliper_w_14
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
   caliper_worker_15:
+    container_name: caliper_w_15
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_16:
     container_name: caliper_w_16
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
-  caliper_worker_16:
+
+  caliper_worker_17:
     container_name: caliper_w_17
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
-  caliper_worker_17:
+
+  caliper_worker_18:
     container_name: caliper_w_18
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
-    networks:
-    - byfn
-  caliper_worker_18:
-    container_name: caliper_w_19
-    image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
-    environment:
-      - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
-    volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
   caliper_worker_19:
-    container_name: caliper_w_20
+    container_name: caliper_w_19
     image: hyperledger/caliper:0.3.2
-    command: launch worker --caliper-flow-only-test --caliper-fabric-loadbalancing tx  --caliper-fabric-gateway-usegateway --caliper-fabric-gateway-discovery --no-caliper-fabric-gateway-gatewaylocalhost --caliper-worker-communication-method mqtt --caliper-worker-remote --caliper-worker-communication-address mqtt://mosquitto:1883
+    command: launch worker
     environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
       - CALIPER_BIND_SUT=fabric:1.4.8
-      - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
-      - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
 
