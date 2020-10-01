@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [ $# -eq 0 ]; then
    echo "provide input"
    exit 1
