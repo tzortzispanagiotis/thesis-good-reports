@@ -1,0 +1,27 @@
+test:
+   workers:
+    type: remote
+    number: 20
+   rounds:
+   - label: createAssetFixedbacklog-50
+     description: Query asset benchmark
+     chaincodeId: fixed-asset
+     txDuration: 30
+     rateControl:
+       type: fixed-backlog
+       opts:
+         unfinished_per_client: 50
+         startingTps: 200
+         #tps: 1
+         #finishingTps: 1000
+     callback: create-asset.js
+     arguments:
+       chaincodeID: fixed-asset
+       bytesize: 100
+monitor:
+  type:
+  - none
+  
+observer:
+  type: local
+  interval: 5

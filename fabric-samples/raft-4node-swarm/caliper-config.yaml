@@ -1,0 +1,18 @@
+caliper:
+  flow:
+    skip:
+      start: true
+      init: true
+      install: true
+      end: true
+  fabric:
+    #loadbalancing: tx
+    gateway:
+      enabled: true
+      localhost: false
+      discovery: true
+  #worker:
+    #remote: true
+    #communication:
+      #method: mqtt
+      #address: mqtt://mosquitto:1883
