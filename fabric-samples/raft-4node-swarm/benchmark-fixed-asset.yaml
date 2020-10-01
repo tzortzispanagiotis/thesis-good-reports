@@ -6,7 +6,7 @@ test:
    - label: createAssetFixedbacklog-50
      description: Query asset benchmark
      chaincodeId: fixed-asset
-     txDuration: 30
+     txDuration: 300
      rateControl:
        type: fixed-backlog
        opts:
