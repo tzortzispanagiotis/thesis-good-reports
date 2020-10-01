@@ -17,7 +17,7 @@ test:
      callback: create-asset.js
      arguments:
        chaincodeID: fixed-asset
-       bytesize: 100
+       bytesize: 8000
 monitor:
   type:
   - none
