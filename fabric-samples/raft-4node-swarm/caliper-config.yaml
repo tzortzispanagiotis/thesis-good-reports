@@ -11,8 +11,8 @@ caliper:
       enabled: true
       localhost: false
       discovery: true
-  #worker:
-    #remote: true
-    #communication:
-      #method: mqtt
-      #address: mqtt://mosquitto:1883
+  worker:
+    remote: true
+    communication:
+      method: mqtt
+      address: mqtt://mosquitto:1883

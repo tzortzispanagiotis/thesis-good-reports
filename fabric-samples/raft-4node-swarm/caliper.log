@@ -1,0 +1,28 @@
+2020.10.01-10:17:41.941[90m debug[39m [caliper] [blockchain] 	Constructed a winston logger with the specified settings
+2020.10.01-10:17:42.183[32m info [39m [caliper] [cli-launch-master] 	Binding specification is present, performing binding for "fabric:1.4.8"
+2020.10.01-10:17:42.189[33m warn [39m [caliper] [bind] 	Working directory not specified. Using "/hyperledger/caliper/workspace"
+2020.10.01-10:17:42.189[32m info [39m [caliper] [bind] 	User-provided arguments for npm: "-g"
+2020.10.01-10:17:42.189[32m info [39m [caliper] [bind] 	Binding for fabric@1.4.8. This might take some time...
+2020.10.01-10:17:42.189[32m info [39m [caliper] [bind] 	Using working directory: /hyperledger/caliper/workspace
+2020.10.01-10:17:42.190[32m info [39m [caliper] [bind] 	Calling npm with: install -g fabric-client@1.4.8 fabric-protos@2.0.0-snapshot.1 fabric-network@1.4.8
+2020.10.01-10:17:55.128[32m info [39m [caliper] [cli-launch-master] 	Set workspace path: /hyperledger/caliper/workspace
+2020.10.01-10:17:55.129[32m info [39m [caliper] [cli-launch-master] 	Set benchmark configuration path: /hyperledger/caliper/workspace/benchmark-fixed-asset.yaml
+2020.10.01-10:17:55.130[32m info [39m [caliper] [cli-launch-master] 	Set network configuration path: /hyperledger/caliper/workspace/caliper-net-config.yaml
+2020.10.01-10:17:55.130[32m info [39m [caliper] [cli-launch-master] 	Set SUT type: fabric:1.4.8
+2020.10.01-10:17:55.140[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
+2020.10.01-10:17:55.961[32m info [39m [caliper] [adapters/fabric] 	Initializing standard adaptor compatible with installed SDK: 1.4.8
+2020.10.01-10:17:56.715[32m info [39m [caliper] [caliper-engine] 	Skipping start commands due to benchmark flow conditioning
+2020.10.01-10:17:56.716[32m info [39m [caliper] [caliper-engine] 	Skipping initialization phase due to benchmark flow conditioning
+2020.10.01-10:17:56.716[32m info [39m [caliper] [caliper-engine] 	Skipping install smart contract phase due to benchmark flow conditioning
+2020.10.01-10:17:56.716[32m info [39m [caliper] [messenger.js] 	Creating messenger of type "mqtt-master" 
+2020.10.01-10:17:56.788[90m debug[39m [caliper] [testObserver.js] 	Creating test observer of type "local"
+2020.10.01-10:17:56.789[32m info [39m [caliper] [local-observer] 	Observer interval set to 5 seconds
+2020.10.01-10:17:56.791[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2020.10.01-10:17:56.792[32m info [39m [caliper] [round-orchestrator] 	Started round 1 (createAssetFixedbacklog-50)
+2020.10.01-10:17:56.792[32m info [39m [caliper] [worker-orchestrator] 	Messenger not configured, entering configure phase...
+2020.10.01-10:17:56.793[32m info [39m [caliper] [mqtt-master-messenger] 	Initializing MQTT messenger ... 
+2020.10.01-10:17:56.830[32m info [39m [caliper] [mqtt-master-messenger] 	Connected to mqtt broker with clientID: mqttjs_b87c1c49
+2020.10.01-10:17:56.833[32m info [39m [caliper] [worker-orchestrator] 	No existing workers detected, entering worker launch phase...
+2020.10.01-10:17:56.833[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 20 workers to be connected...
+2020.10.01-10:18:01.838[90m debug[39m [caliper] [mqtt-master-messenger] 	Published message: {"to":["all"],"from":"mqttjs_b87c1c49","timestamp":"2020-10-01T10:18:01.837Z","data":{"type":"register"}}
+2020.10.01-10:18:06.840[90m debug[39m [caliper] [mqtt-master-messenger] 	Published message: {"to":["all"],"from":"mqttjs_b87c1c49","timestamp":"2020-10-01T10:18:06.840Z","data":{"type":"register"}}
