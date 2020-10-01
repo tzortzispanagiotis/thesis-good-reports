@@ -229,7 +229,7 @@ Orderer: &OrdererDefaults
     BatchSize:
 
         # Max Message Count: The maximum number of messages to permit in a batch
-        MaxMessageCount: 10
+        MaxMessageCount: 100
 
         # Absolute Max Bytes: The absolute maximum number of bytes allowed for
         # the serialized messages in a batch.
@@ -271,7 +271,7 @@ Orderer: &OrdererDefaults
               ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
               ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
             - Host: orderer5.example.com
-              Port: 7050
+              Port: 8050
               ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
               ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
 
@@ -415,7 +415,7 @@ Profiles:
                   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
                   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
                 - Host: orderer5.example.com
-                  Port: 7050
+                  Port: 8050
                   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
                   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
             Addresses:
@@ -423,7 +423,7 @@ Profiles:
                 - orderer2.example.com:7050
                 - orderer3.example.com:7050
                 - orderer4.example.com:7050
-                - orderer5.example.com:7050
+                - orderer5.example.com:8050
 
             Organizations:
             - *OrdererOrg
