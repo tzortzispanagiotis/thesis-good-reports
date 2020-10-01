@@ -15,6 +15,6 @@ services:
       - CALIPER_BENCHCONFIG=raft-4node-swarm/benchmark-fabcar.yaml
       - CALIPER_NETWORKCONFIG=raft-4node-swarm/caliper-net-config.yaml
     volumes:
-      - /home/user/caliper-benchmarks:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
