@@ -15,6 +15,6 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
     networks:
     - byfn
