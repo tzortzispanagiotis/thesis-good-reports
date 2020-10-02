@@ -22,4 +22,4 @@ services:
           - ./crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/:/var/hyperledger/orderer/tls
           - orderer5.example.com:/var/hyperledger/production/orderer
       ports:
-      - 8050:7050
+      -7050:7050
