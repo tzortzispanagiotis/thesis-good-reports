@@ -7,8 +7,8 @@ networks:
   byfn:
     external:
       name: first-network
-
-orderer2.example.com:
+services:
+  orderer2.example.com:
     extends:
       file: base/peer-base.yaml
       service: orderer-base

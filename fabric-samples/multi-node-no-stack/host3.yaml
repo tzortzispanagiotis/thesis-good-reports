@@ -9,7 +9,6 @@ networks:
       name: first-network
 
 services:
-
   orderer3.example.com:
     extends:
       file: base/peer-base.yaml
