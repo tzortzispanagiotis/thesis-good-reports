@@ -32,7 +32,7 @@ clients:
         cryptoStore:
           path: /tmp/hfc-cvs/org1
       clientPrivateKey:
-        path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/187504b530cea0a31e0e43afd4e465b4ba17065b8854d64533c2628d5e905490_sk
+        path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
       clientSignedCert:
         path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
@@ -44,7 +44,7 @@ clients:
         cryptoStore:
           path: /tmp/hfc-cvs/org2
       clientPrivateKey:
-        path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/6025901e11e84d3f0599da614986b0628dcbbe051229b18016bfa15faa8ed952_sk
+        path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
       clientSignedCert:
         path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
@@ -52,7 +52,7 @@ clients:
 channels:
   mychannel:
     created: true
-    orderers: ['orderer.example.com','orderer2.example.com','orderer3.example.com','orderer4.example.com'] #,'orderer5.example.com']
+    orderers: ['orderer.example.com','orderer2.example.com','orderer3.example.com','orderer4.example.com' ,'orderer5.example.com']
     peers: 
       peer0.org1.example.com:
        eventSource: true
@@ -80,7 +80,7 @@ organizations:
     - peer0.org1.example.com
     - peer1.org1.example.com
     adminPrivateKey:
-      path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/187504b530cea0a31e0e43afd4e465b4ba17065b8854d64533c2628d5e905490_sk
+      path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
     signedCert:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
@@ -91,7 +91,7 @@ organizations:
     - peer0.org2.example.com
     - peer1.org2.example.com
     adminPrivateKey:
-      path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/6025901e11e84d3f0599da614986b0628dcbbe051229b18016bfa15faa8ed952_sk
+      path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
     signedCert:
       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
