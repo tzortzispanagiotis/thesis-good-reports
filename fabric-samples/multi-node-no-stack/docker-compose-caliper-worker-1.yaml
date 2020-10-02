@@ -16,7 +16,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
   
@@ -30,7 +30,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -44,7 +44,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -58,7 +58,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -72,7 +72,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -86,7 +86,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -100,7 +100,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
@@ -114,7 +114,7 @@ services:
       - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
       - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
     volumes:
-      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+      - /home/user/thesis-good-reports/fabric-samples/multi-node-no-stack:/hyperledger/caliper/workspace
     networks:
     - byfn
 
