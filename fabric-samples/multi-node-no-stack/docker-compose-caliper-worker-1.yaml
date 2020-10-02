@@ -1,0 +1,148 @@
+version: "2"
+
+networks:
+  byfn:
+    external:
+      name: first-network
+
+services:
+  caliper_worker_0:
+    container_name: caliper_w_0
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+  
+  caliper_worker_1:
+    container_name: caliper_w_1
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_2:
+    container_name: caliper_w_2
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_3:
+    container_name: caliper_w_3
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_4:
+    container_name: caliper_w_4
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_5:
+    container_name: caliper_w_5
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_6:
+    container_name: caliper_w_6
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  caliper_worker_7:
+    container_name: caliper_w_7
+    image: hyperledger/caliper:0.3.2
+    command: launch worker
+    environment:
+      - CALIPER_PROJECTCONFIG=caliper-config.yaml
+      - CALIPER_BIND_SUT=fabric:1.4.8
+      - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+      - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+    volumes:
+      - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+    networks:
+    - byfn
+
+  # caliper_worker_8:
+  #   container_name: caliper_w_8
+  #   image: hyperledger/caliper:0.3.2
+  #   command: launch worker
+  #   environment:
+  #     - CALIPER_PROJECTCONFIG=caliper-config.yaml
+  #     - CALIPER_BIND_SUT=fabric:1.4.8
+  #     - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+  #     - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+  #   volumes:
+  #     - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+  #   networks:
+  #   - byfn
+
+  # caliper_worker_9:
+  #   container_name: caliper_w_9
+  #   image: hyperledger/caliper:0.3.2
+  #   command: launch worker
+  #   environment:
+  #     - CALIPER_PROJECTCONFIG=caliper-config.yaml
+  #     - CALIPER_BIND_SUT=fabric:1.4.8
+  #     - CALIPER_BENCHCONFIG=benchmark-fixed-asset.yaml
+  #     - CALIPER_NETWORKCONFIG=caliper-net-config.yaml
+  #   volumes:
+  #     - /home/user/thesis-good-reports/fabric-samples/raft-4node-swarm:/hyperledger/caliper/workspace
+  #   networks:
+  #   - byfn
+

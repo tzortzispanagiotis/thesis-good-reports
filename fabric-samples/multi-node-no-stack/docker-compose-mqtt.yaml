@@ -1,0 +1,15 @@
+version: "2"
+
+networks:
+  byfn:
+    external:
+      name: first-network
+services:
+  mqtt:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    ports:
+    - "1883:1883"
+    - "9001:9001"
+    networks:
+    - byfn
