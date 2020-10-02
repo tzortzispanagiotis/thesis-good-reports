@@ -147,7 +147,7 @@ orderers:
     tlsCACerts:
         path: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
   orderer5.example.com:
-    url: grpcs://orderer5.example.com:8050
+    url: grpcs://orderer5.example.com:7050
     grpcOptions:
       ssl-target-name-override: orderer5.example.com
     tlsCACerts:
