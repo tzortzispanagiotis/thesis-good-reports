@@ -81,8 +81,8 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     ports:
-    - 7050:7050
-    - 28443:8443
+    - 8050:7050
+    - 29443:8443
 
     volumes:
     - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
@@ -122,8 +122,8 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     ports:
-    - 7050:7050
-    - 28443:8443
+    - 9050:7050
+    - 30443:8443
 
     volumes:
     - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
@@ -163,8 +163,8 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     ports:
-    - 7050:7050
-    - 28443:8443
+    - 10050:7050
+    - 31443:8443
 
     volumes:
     - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
@@ -204,8 +204,8 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     ports:
-    - 7050:7050
-    - 28443:8443
+    - 11050:7050
+    - 32443:8443
 
     volumes:
     - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
@@ -319,8 +319,8 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: peer node start
     ports:
-    - 7051:7051
-    - 7052:7052
+    - 8051:7051
+    - 8052:7052
     volumes:
     - /var/run/:/host/var/run/
     - ../crypto-config/peerOrganizations/org1.example.com/peers/peer0.org2.example.com/msp:/etc/hyperledger/fabric/msp
