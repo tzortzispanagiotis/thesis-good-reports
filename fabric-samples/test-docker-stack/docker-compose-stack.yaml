@@ -31,7 +31,7 @@ services:
           - 28443:8443
   
           volumes:
-          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/etc/hyperledger/configtx
+          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
           - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/:/etc/hyperledger/msp/orderer
           networks:
               first-network:
@@ -66,7 +66,7 @@ services:
         - 29443:8443
  
         volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/etc/hyperledger/configtx
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
         - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/:/etc/hyperledger/msp/orderer
         networks:
             first-network:
@@ -101,7 +101,7 @@ services:
         - 30443:8443
  
         volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/etc/hyperledger/configtx
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
         - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/:/etc/hyperledger/msp/orderer
         networks:
             first-network:
@@ -136,7 +136,7 @@ services:
         - 31443:8443
  
         volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/etc/hyperledger/configtx
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
         - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/:/etc/hyperledger/msp/orderer
         networks:
             first-network:
@@ -171,7 +171,7 @@ services:
         - 32443:8443
  
         volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/etc/hyperledger/configtx
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
         - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/:/etc/hyperledger/msp/orderer
         networks:
             first-network:
@@ -294,9 +294,9 @@ services:
       volumes:
           - /var/run/:/host/var/run/
           - /home/user/thesis-good-reports/fabric-samples/chaincode/:/opt/gopath/src/github.com/chaincode
-          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
-          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
-          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
+          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
+          - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
 
       networks:
           first-network:
