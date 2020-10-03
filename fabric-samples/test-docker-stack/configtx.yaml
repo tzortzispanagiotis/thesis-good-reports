@@ -45,23 +45,23 @@ Orderer: &OrdererDefaults
     MaxChannels: 0
     EtcdRaft:
         Consenters:
-        - Host: orderer0.example.com
+        - Host: orderer.example.com
           Port: 7050
           ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
           ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-        - Host: orderer1.example.com
+        - Host: orderer2.example.com
           Port: 7050
           ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
           ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
-        - Host: orderer2.example.com
+        - Host: orderer3.example.com
           Port: 7050
           ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
           ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
-        - Host: orderer3.example.com
+        - Host: orderer4.example.com
           Port: 7050
           ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
           ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/tls/server.crt
-        - Host: orderer4.example.com
+        - Host: orderer5.example.com
           Port: 7050
           ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
           ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
