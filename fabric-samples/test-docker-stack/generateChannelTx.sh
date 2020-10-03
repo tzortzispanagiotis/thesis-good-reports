@@ -2,6 +2,8 @@
 
 rm -f ./channel-artifacts
 export FABRIC_CFG_PATH=$PWD
+export FABRIC_VERSION=1.4.8
+export SYS_CHANNEL=byfn-sys-channel
 
 mkdir channel-artifacts
 
