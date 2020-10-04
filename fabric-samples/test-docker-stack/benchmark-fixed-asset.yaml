@@ -19,6 +19,38 @@ test:
      arguments:
        chaincodeID: fixed-asset
        bytesize: 100
+    - label: createAssetFixedbacklog-50
+     description: Query asset benchmark
+     chaincodeId: fixed-asset
+     txDuration: 300
+    #  txDuration: 10
+     rateControl:
+       type: fixed-backlog
+       opts:
+         unfinished_per_client: 50
+         startingTps: 200
+        #  tps: 20
+         #finishingTps: 1000
+     callback: create-asset.js
+     arguments:
+       chaincodeID: fixed-asset
+       bytesize: 100
+    - label: createAssetFixedbacklog-50
+     description: Query asset benchmark
+     chaincodeId: fixed-asset
+     txDuration: 300
+    #  txDuration: 10
+     rateControl:
+       type: fixed-backlog
+       opts:
+         unfinished_per_client: 100
+         startingTps: 200
+        #  tps: 20
+         #finishingTps: 1000
+     callback: create-asset.js
+     arguments:
+       chaincodeID: fixed-asset
+       bytesize: 100  
 monitor:
   type:
   - none
