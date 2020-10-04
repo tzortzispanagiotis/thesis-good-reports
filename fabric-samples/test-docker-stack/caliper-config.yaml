@@ -5,12 +5,12 @@ caliper:
       init: true
       install: true
       end: true
-  fabric:
+  # fabric:
     #loadbalancing: tx
-    gateway:
-      enabled: true
-      localhost: false
-      discovery: true
+    # gateway:
+    #   enabled: true
+    #   localhost: false
+    #   discovery: true
   worker:
     remote: true
     communication:
