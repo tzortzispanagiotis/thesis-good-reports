@@ -7,13 +7,13 @@ test:
      description: Query asset benchmark
      chaincodeId: fixed-asset
     #  txDuration: 300
-     txDuration: 1
+     txDuration: 10
      rateControl:
        type: fixed-rate
        opts:
         #  unfinished_per_client: 50
         #  startingTps: 200
-         tps: 1
+         tps: 1000
          #finishingTps: 1000
      callback: create-asset.js
      arguments:
