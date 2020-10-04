@@ -63,7 +63,7 @@ module.exports.run = function() {
         chaincodeFunction: 'createAsset',
         chaincodeArguments: [uuid, JSON.stringify(asset)]
     };
-    return bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs);
+    return bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs, 30);
 };
 
 module.exports.end = function() {
