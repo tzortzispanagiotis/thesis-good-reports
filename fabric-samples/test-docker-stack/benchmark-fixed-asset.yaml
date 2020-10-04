@@ -13,7 +13,7 @@ test:
        opts:
         #  unfinished_per_client: 50
         #  startingTps: 200
-         tps: 1000
+         tps: 20
          #finishingTps: 1000
      callback: create-asset.js
      arguments:
