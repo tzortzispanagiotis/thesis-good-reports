@@ -6,13 +6,14 @@ test:
    - label: createAssetFixedbacklog-50
      description: Query asset benchmark
      chaincodeId: fixed-asset
-     txDuration: 300
+    #  txDuration: 300
+     txDuration: 1
      rateControl:
-       type: fixed-backlog
+       type: fixed-rate
        opts:
-         unfinished_per_client: 50
-         startingTps: 200
-         #tps: 1
+        #  unfinished_per_client: 50
+        #  startingTps: 200
+         tps: 1
          #finishingTps: 1000
      callback: create-asset.js
      arguments:
