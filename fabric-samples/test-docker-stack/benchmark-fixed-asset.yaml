@@ -16,32 +16,32 @@ test:
     #   arguments:
     #     chaincodeID: fixed-asset
     #     bytesize: 100
-    - label: createAssetFixedRate-50
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 30
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 100
-    - label: createAssetFixedRate-100
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 30
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 100
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 100
+    # - label: createAssetFixedRate-50
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 30
+    #   rateControl:
+    #     type: fixed-rate
+    #     opts:
+    #       tps: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 100
+    # - label: createAssetFixedRate-100
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 30
+    #   rateControl:
+    #     type: fixed-rate
+    #     opts:
+    #       tps: 100
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 100
 
     - label: createAssetFixedRate-1000
       description: Create asset benchmark
