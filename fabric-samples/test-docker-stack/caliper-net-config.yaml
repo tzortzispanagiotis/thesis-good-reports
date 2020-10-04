@@ -139,7 +139,7 @@ orderers:
     tlsCACerts:
         path: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
   orderer3.example.com:
-    url: grpcs://192.168.0.4.com:9050
+    url: grpcs://192.168.0.4:9050
     grpcOptions:
       ssl-target-name-override: orderer3.example.com
       grpc.keepalive_time_ms: 600000
