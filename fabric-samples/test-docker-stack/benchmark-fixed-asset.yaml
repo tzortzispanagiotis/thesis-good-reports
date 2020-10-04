@@ -3,7 +3,33 @@ test:
     type: remote
     number: 16
   rounds:
-    - label: createAssetFixedbacklog-10
+    - label: createAssetFixedbacklog-50-byte-1
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      txDuration: 300
+      rateControl:
+        type: fixed-backlog
+        opts:
+          unfinished_per_client: 50
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 1
+    - label: createAssetFixedbacklog-50-byte-10
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      txDuration: 300
+      rateControl:
+        type: fixed-backlog
+        opts:
+          unfinished_per_client: 50
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10
+    - label: createAssetFixedbacklog-50-byte-100
       description: Create asset benchmark
       chaincodeId: fixed-asset
       txDuration: 300
@@ -16,6 +42,19 @@ test:
       arguments:
         chaincodeID: fixed-asset
         bytesize: 100
+    - label: createAssetFixedbacklog-50-byte-1000
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      txDuration: 300
+      rateControl:
+        type: fixed-backlog
+        opts:
+          unfinished_per_client: 50
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 1000
     - label: createAssetFixedRate-50
       description: Create asset benchmark
       chaincodeId: fixed-asset
