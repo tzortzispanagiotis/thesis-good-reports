@@ -10,7 +10,7 @@ test:
       rateControl:
         type: fixed-backlog
         opts:
-          unfinished_per_client: 50
+          unfinished_per_client: 10
           startingTps: 200
       callback: create-asset.js
       arguments:
