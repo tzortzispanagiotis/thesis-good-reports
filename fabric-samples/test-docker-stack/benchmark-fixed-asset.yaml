@@ -11,7 +11,7 @@ test:
         type: fixed-backlog
         opts:
           unfinished_per_client: 10
-          startingTps: 200
+          # startingTps: 200
       callback: create-asset.js
       arguments:
         chaincodeID: fixed-asset
