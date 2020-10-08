@@ -41,145 +41,140 @@ services:
               placement:
                   constraints: [node.hostname == node-2]
 
-    orderer2_example_com:
-        image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
-        environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
-        - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
-        - ORDERER_GENERAL_GENESISMETHOD=file
-        - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
-        - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
-        - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
-        - ORDERER_GENERAL_TLS_ENABLED=true
-        - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
-        - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
-        - ORDERER_METRICS_PROVIDER=prometheus
+    # orderer2_example_com:
+    #     image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
+    #     environment:
+    #     - FABRIC_LOGGING_SPEC=grpc=debug:debug
+    #     - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+    #     - ORDERER_GENERAL_GENESISMETHOD=file
+    #     - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
+    #     - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+    #     - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+    #     - ORDERER_GENERAL_TLS_ENABLED=true
+    #     - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
+    #     - ORDERER_METRICS_PROVIDER=prometheus
  
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-        command: orderer
-        ports:
-        - 8050:7050
-        - 29443:8443
- 
-        volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/:/etc/hyperledger/msp/orderer
-        networks:
-            first-network:
-                aliases:
-                - orderer2.example.com 
-        deploy:
-            placement:
-                constraints: [node.hostname == node-3]
+    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    #     command: orderer
+    #     ports:
+    #     -  /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/:/etc/hyperledger/msp/orderer
+    #     networks:
+    #         first-network:
+    #             aliases:
+    #             - orderer2.example.com 
+    #     deploy:
+    #         placement:
+    #             constraints: [node.hostname == node-3]
 
-    orderer3_example_com:
-        image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
-        environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
-        - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
-        - ORDERER_GENERAL_GENESISMETHOD=file
-        - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
-        - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
-        - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
-        - ORDERER_GENERAL_TLS_ENABLED=true
-        - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
-        - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
-        - ORDERER_METRICS_PROVIDER=prometheus
+    # orderer3_example_com:
+    #     image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
+    #     environment:
+    #     - FABRIC_LOGGING_SPEC=grpc=debug:debug
+    #     - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+    #     - ORDERER_GENERAL_GENESISMETHOD=file
+    #     - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
+    #     - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+    #     - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+    #     - ORDERER_GENERAL_TLS_ENABLED=true
+    #     - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
+    #     - ORDERER_METRICS_PROVIDER=prometheus
  
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-        command: orderer
-        ports:
-        - 9050:7050
-        - 30443:8443
+    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    #     command: orderer
+    #     ports:
+    #     - 9050:7050
+    #     - 30443:8443
  
-        volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/:/etc/hyperledger/msp/orderer
-        networks:
-            first-network:
-                aliases:
-                - orderer3.example.com 
-        deploy:
-            placement:
-                constraints: [node.hostname == node-4]
+    #     volumes:
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/:/etc/hyperledger/msp/orderer
+    #     networks:
+    #         first-network:
+    #             aliases:
+    #             - orderer3.example.com 
+    #     deploy:
+    #         placement:
+    #             constraints: [node.hostname == node-4]
 
-    orderer4_example_com:
-        image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
-        environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
-        - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
-        - ORDERER_GENERAL_GENESISMETHOD=file
-        - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
-        - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
-        - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
-        - ORDERER_GENERAL_TLS_ENABLED=true
-        - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
-        - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
-        - ORDERER_METRICS_PROVIDER=prometheus
+    # orderer4_example_com:
+    #     image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
+    #     environment:
+    #     - FABRIC_LOGGING_SPEC=grpc=debug:debug
+    #     - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+    #     - ORDERER_GENERAL_GENESISMETHOD=file
+    #     - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
+    #     - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+    #     - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+    #     - ORDERER_GENERAL_TLS_ENABLED=true
+    #     - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
+    #     - ORDERER_METRICS_PROVIDER=prometheus
  
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-        command: orderer
-        ports:
-        - 10050:7050
-        - 31443:8443
+    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    #     command: orderer
+    #     ports:
+    #     - 10050:7050
+    #     - 31443:8443
  
-        volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/:/etc/hyperledger/msp/orderer
-        networks:
-            first-network:
-                aliases:
-                - orderer4.example.com 
-        deploy:
-            placement:
-                constraints: [node.hostname == node-5]
+    #     volumes:
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/:/etc/hyperledger/msp/orderer
+    #     networks:
+    #         first-network:
+    #             aliases:
+    #             - orderer4.example.com 
+    #     deploy:
+    #         placement:
+    #             constraints: [node.hostname == node-5]
 
-    orderer5_example_com:
-        image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
-        environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
-        - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
-        - ORDERER_GENERAL_GENESISMETHOD=file
-        - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
-        - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
-        - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
-        - ORDERER_GENERAL_TLS_ENABLED=true
-        - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
-        - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-        - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-        - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
-        - ORDERER_METRICS_PROVIDER=prometheus
+    # orderer5_example_com:
+    #     image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
+    #     environment:
+    #     - FABRIC_LOGGING_SPEC=grpc=debug:debug
+    #     - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+    #     - ORDERER_GENERAL_GENESISMETHOD=file
+    #     - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
+    #     - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+    #     - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+    #     - ORDERER_GENERAL_TLS_ENABLED=true
+    #     - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+    #     - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+    #     - ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:8443
+    #     - ORDERER_METRICS_PROVIDER=prometheus
  
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-        command: orderer
-        ports:
-        - 11050:7050
-        - 32443:8443
+    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    #     command: orderer
+    #     ports:
+    #     - 11050:7050
+    #     - 32443:8443
  
-        volumes:
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/:/etc/hyperledger/msp/orderer
-        networks:
-            first-network:
-                aliases:
-                - orderer5.example.com 
-        deploy:
-            placement:
-                constraints: [node.hostname == node-6]
+    #     volumes:
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/channel-artifacts/:/etc/hyperledger/configtx
+    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/:/etc/hyperledger/msp/orderer
+    #     networks:
+    #         first-network:
+    #             aliases:
+    #             - orderer5.example.com 
+    #     deploy:
+    #         placement:
+    #             constraints: [node.hostname == node-6]
 
     peer0_org1_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}

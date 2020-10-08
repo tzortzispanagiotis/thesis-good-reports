@@ -52,7 +52,7 @@ clients:
 channels:
   mychannel:
     created: true
-    orderers: ['orderer.example.com','orderer2.example.com','orderer3.example.com','orderer4.example.com' ,'orderer5.example.com']
+    orderers: ['orderer.example.com'] #,'orderer2.example.com','orderer3.example.com','orderer4.example.com' ,'orderer5.example.com']
     peers: 
       peer0.org1.example.com:
        eventSource: true
@@ -131,31 +131,31 @@ orderers:
       grpc.keepalive_time_ms: 600000
     tlsCACerts:
         path: crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
-  orderer2.example.com:
-    url: grpcs://192.168.0.3:8050
-    grpcOptions:
-      ssl-target-name-override: orderer2.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-        path: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
-  orderer3.example.com:
-    url: grpcs://192.168.0.4:9050
-    grpcOptions:
-      ssl-target-name-override: orderer3.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-        path: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
-  orderer4.example.com:
-    url: grpcs://192.168.0.10:10050
-    grpcOptions:
-      ssl-target-name-override: orderer4.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-        path: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
-  orderer5.example.com:
-    url: grpcs://192.168.0.11:11050
-    grpcOptions:
-      ssl-target-name-override: orderer5.example.com
-    tlsCACerts:
-        path: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  # orderer2.example.com:
+  #   url: grpcs://192.168.0.3:8050
+  #   grpcOptions:
+  #     ssl-target-name-override: orderer2.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #       path: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  # orderer3.example.com:
+  #   url: grpcs://192.168.0.4:9050
+  #   grpcOptions:
+  #     ssl-target-name-override: orderer3.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #       path: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  # orderer4.example.com:
+  #   url: grpcs://192.168.0.10:10050
+  #   grpcOptions:
+  #     ssl-target-name-override: orderer4.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #       path: crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  # orderer5.example.com:
+  #   url: grpcs://192.168.0.11:11050
+  #   grpcOptions:
+  #     ssl-target-name-override: orderer5.example.com
+  #   tlsCACerts:
+  #       path: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
