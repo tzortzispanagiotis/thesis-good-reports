@@ -57,15 +57,15 @@ channels:
       peer0.org1.example.com:
        eventSource: true
        endorsingPeer: true
-      # peer1.org1.example.com:
-      #  eventSource: true
-      #  endorsingPeer: true
+      peer1.org1.example.com:
+       eventSource: true
+       endorsingPeer: true
       peer0.org2.example.com:
        eventSource: true
        endorsingPeer: true
-      # peer1.org2.example.com:
-      #  eventSource: true
-      #  endorsingPeer: true
+      peer1.org2.example.com:
+       eventSource: true
+       endorsingPeer: true
 
     chaincodes:
      - id: fixed-asset
@@ -78,7 +78,7 @@ organizations:
     mspid: Org1MSP
     peers:
     - peer0.org1.example.com
-    # - peer1.org1.example.com
+    - peer1.org1.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
     signedCert:
@@ -89,7 +89,7 @@ organizations:
     mspid: Org2MSP
     peers:
     - peer0.org2.example.com
-    # - peer1.org2.example.com
+    - peer1.org2.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
     signedCert:
@@ -105,10 +105,10 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
   
-  # peer1.org1.example.com:
-  #   url: grpcs://peer1.org1.example.com:7051
-  #   tlsCACerts:
-  #     path:  crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+  peer1.org1.example.com:
+    url: grpcs://192.168.0.15:9051
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
   peer0.org2.example.com:
     url: grpcs://192.168.0.13:8051
@@ -118,10 +118,10 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
-  # peer1.org2.example.com:
-  #   url: grpcs://peer1.org2.example.com:7051
-  #   tlsCACerts:
-  #     path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+  peer1.org2.example.com:
+    url: grpcs://192.168.0.14:10051
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
 orderers:
   orderer.example.com:
