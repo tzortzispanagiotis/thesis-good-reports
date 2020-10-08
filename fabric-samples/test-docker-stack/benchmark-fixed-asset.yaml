@@ -1,7 +1,7 @@
 test:
   workers:
     type: remote
-    number: 8
+    number: 12
   rounds:
     - label: createAssetFixedRate-20-1
       description: Create asset benchmark
