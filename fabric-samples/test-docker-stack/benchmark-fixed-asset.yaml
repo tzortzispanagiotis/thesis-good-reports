@@ -6,7 +6,8 @@ test:
     - label: createAssetFixedRate-20
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -19,7 +20,8 @@ test:
     - label: createAssetFixedRate-40
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+            # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -32,7 +34,8 @@ test:
     - label: createAssetFixedRate-60
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -45,7 +48,8 @@ test:
     - label: createAssetFixedRate-80
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -58,7 +62,8 @@ test:
     - label: createAssetFixedRate-100
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -71,7 +76,8 @@ test:
     - label: createAssetFixedRate-120
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -84,7 +90,8 @@ test:
     - label: createAssetFixedRate-140
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -97,7 +104,8 @@ test:
     - label: createAssetFixedRate-160
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -110,7 +118,8 @@ test:
     - label: createAssetFixedRate-180
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
@@ -123,7 +132,8 @@ test:
     - label: createAssetFixedRate-200
       description: Create asset benchmark
       chaincodeId: fixed-asset
-      txDuration: 30
+      # txDuration: 30
+      txNumber: 1000
       rateControl:
         type: fixed-rate
         opts:
