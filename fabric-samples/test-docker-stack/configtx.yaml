@@ -65,7 +65,7 @@ Orderer: &OrdererDefaults
     # - orderer4.example.com:7050
     # - orderer5.example.com:7050
     
-    BatchTimeout: 10s
+    BatchTimeout: 2s
     BatchSize:
         MaxMessageCount: 10
         AbsoluteMaxBytes: 10 MB
