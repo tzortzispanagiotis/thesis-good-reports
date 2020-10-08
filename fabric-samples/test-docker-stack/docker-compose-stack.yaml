@@ -9,7 +9,7 @@ services:
     orderer_example_com:
           image: hyperledger/fabric-orderer:${FABRIC_VERSION} 
           environment:
-          - FABRIC_LOGGING_SPEC=grpc=debug:debug
+          - FABRIC_LOGGING_SPEC=INFO
           - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
           - ORDERER_GENERAL_GENESISMETHOD=file
           - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
@@ -179,7 +179,7 @@ services:
     peer0_org1_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}
         environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
+        - FABRIC_LOGGING_SPEC=INFO
         - CORE_CHAINCODE_LOGGING_LEVEL=INFO
         - CORE_CHAINCODE_LOGGING_SHIM=INFO
         - CORE_CHAINCODE_EXECUTETIMEOUT=999999
@@ -224,7 +224,7 @@ services:
     peer1_org1_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}
         environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
+        - FABRIC_LOGGING_SPEC=INFO
         - CORE_CHAINCODE_LOGGING_LEVEL=INFO
         - CORE_CHAINCODE_LOGGING_SHIM=INFO
         - CORE_CHAINCODE_EXECUTETIMEOUT=999999
@@ -269,7 +269,7 @@ services:
     peer0_org2_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}
         environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
+        - FABRIC_LOGGING_SPEC=INFO
         - CORE_CHAINCODE_LOGGING_LEVEL=INFO
         - CORE_CHAINCODE_LOGGING_SHIM=INFO
         - CORE_CHAINCODE_EXECUTETIMEOUT=999999
@@ -314,7 +314,7 @@ services:
     peer1_org2_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}
         environment:
-        - FABRIC_LOGGING_SPEC=grpc=debug:debug
+        - FABRIC_LOGGING_SPEC=INFO
         - CORE_CHAINCODE_LOGGING_LEVEL=INFO
         - CORE_CHAINCODE_LOGGING_SHIM=INFO
         - CORE_CHAINCODE_EXECUTETIMEOUT=999999
