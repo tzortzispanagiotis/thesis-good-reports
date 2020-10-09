@@ -1297,160 +1297,160 @@ test:
     #   arguments:
     #     chaincodeID: fixed-asset
     #     bytesize: 10
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
-    # - label: createAssetFixedRate-200
-    #   description: Create asset benchmark
-    #   chaincodeId: fixed-asset
-    #   # txDuration: 30
-    #   txNumber: 1000
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 200
-    #       # startingTps: 200
-    #   callback: create-asset.js
-    #   arguments:
-    #     chaincodeID: fixed-asset
-    #     bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
+    - label: createAssetFixedRate-200
+      description: Create asset benchmark
+      chaincodeId: fixed-asset
+      # txDuration: 30
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 200
+          # startingTps: 200
+      callback: create-asset.js
+      arguments:
+        chaincodeID: fixed-asset
+        bytesize: 10 
     # - label: createAssetFixedBacklog-50
     #   description: Create asset benchmark
     #   chaincodeId: fixed-asset
@@ -1509,146 +1509,146 @@ test:
     #     chaincodeID: fixed-asset
     #     bytesize: 10 
 
-    - label: createAssetFixedBacklog-50-1
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-2
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-3
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-4
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-5
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-6
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-7
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-8
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-9
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
-    - label: createAssetFixedBacklog-50-9
-      description: Create asset benchmark
-      chaincodeId: fixed-asset
-      txDuration: 300
-      # txNumber: 1000
-      rateControl:
-        type: fixed-backlog
-        opts:
-          unfinished_per_client: 50
-          # startingTps: 200
-      callback: create-asset.js
-      arguments:
-        chaincodeID: fixed-asset
-        bytesize: 10 
+    # - label: createAssetFixedBacklog-50-1
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-2
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-3
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-4
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-5
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-6
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-7
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-8
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-9
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
+    # - label: createAssetFixedBacklog-50-9
+    #   description: Create asset benchmark
+    #   chaincodeId: fixed-asset
+    #   txDuration: 300
+    #   # txNumber: 1000
+    #   rateControl:
+    #     type: fixed-backlog
+    #     opts:
+    #       unfinished_per_client: 50
+    #       # startingTps: 200
+    #   callback: create-asset.js
+    #   arguments:
+    #     chaincodeID: fixed-asset
+    #     bytesize: 10 
 monitor:
   type:
   - none
