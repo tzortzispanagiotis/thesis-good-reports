@@ -57,7 +57,7 @@ Organizations:
         Port: 7051 
 
 Orderer: &OrdererDefaults
-    OrdererType: etcdraft
+    OrdererType: solo
     Addresses:
     - orderer.example.com:7050
     # - orderer2.example.com:7050
@@ -65,11 +65,11 @@ Orderer: &OrdererDefaults
     # - orderer4.example.com:7050
     # - orderer5.example.com:7050
     
-    BatchTimeout: 250ms
+    BatchTimeout: 2s
     BatchSize:
         MaxMessageCount: 10
-        AbsoluteMaxBytes: 10 MB
-        PreferredMaxBytes: 10 MB
+        AbsoluteMaxBytes: 999 MB
+        PreferredMaxBytes: 999 MB
 
 
     MaxChannels: 0
