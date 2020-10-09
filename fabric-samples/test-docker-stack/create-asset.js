@@ -53,6 +53,15 @@ module.exports.init = async function(blockchain, context, args) {
     }
 
     contx = context;
+    maxEndorseTime = -1;
+    maxOrdererTime = -1;
+    maxCommitTime = -1;
+    allEndorseTimes = 0;
+    allOrdererTimes = 0;
+    allCommitTimes = 0;
+
+    worstEndorser;
+    worstCommiter;
 };
 
 module.exports.run = function() {
@@ -63,9 +72,49 @@ module.exports.run = function() {
         chaincodeFunction: 'createAsset',
         chaincodeArguments: [uuid, JSON.stringify(asset)]
     };
-    return bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs);
+    let results = await bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs);
+    for (let result of results) {
+        let custom = result.GetCustomData();
+        startTime = result.GetTimeCreate();
+        endorseTime = custom.get('time_endorse');
+        ordererAck = custom.get('time_orderer_ack');
+        endTime = result.GetTimeFinal();
+         //console.log('Time from submit to endorse success= '+ (endorseTime - startTime));
+         //console.log('time from endorse success to orderer received ack= ' + (ordererAck - endorseTime));
+         //console.log('Time from orderer ack to final = ' + (endTime - ordererAck));
+         if ((endorseTime - startTime) > maxEndorseTime) {
+           maxEndorseTime = (endorseTime - startTime);
+           worstEndorser = custom;
+         }
+         if ((ordererAck - endorseTime) > maxOrdererTime) {
+           maxOrdererTime = (ordererAck - endorseTime);
+         }
+         if ((endTime - ordererAck) > maxCommitTime) {
+           maxCommitTime = (endTime - ordererAck);
+           worstCommiter = custom;
+         }
+         allEndorseTimes += (endorseTime - startTime);
+         allOrdererTimes += (ordererAck - endorseTime);
+         allCommitTimes += (endTime - ordererAck);
+ //result.GetCustomData().forEach(logMapElements);
+ 
+     }
+     //let customData = results.GetId();
+     //customData.forEach(logMapElements);
+     //console.log(customData);
+     return results;
+ 
 };
 
 module.exports.end = function() {
+    let allTimes = allEndorseTimes + allOrdererTimes + allCommitTimes;
+    console.log('Client ' + clientIdx + ' max endorse time = ' + maxEndorseTime / 1000 +'ms');
+    console.log('Client ' + clientIdx + ' max ordererAck time= ' + maxOrdererTime / 1000 +'ms');
+    console.log('Client ' + clientIdx + ' max commit time= ' + maxCommitTime / 1000 +'ms');
+    console.log('Client ' + clientIdx + ' total transactions = ' + txIdx);
+    console.log('Client ' + clientIdx + ' transactions spent ' + (allEndorseTimes * 100 / allTimes) + '% time in endorsement ,' +
+                    + (allOrdererTimes * 100 / allTimes) + '% time for orderer response, ' + (allCommitTimes * 100 / allTimes) + 'time in commit await');
+    console.log('worst endorser custom data: '+worstEndorser);
+    console.log('worst endorser custom data: '+worstCommiter);
     return Promise.resolve();
 };
