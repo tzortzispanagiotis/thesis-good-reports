@@ -32,6 +32,8 @@ let txIndex = 0;
 let clientIdx;
 let asset;
 let bc, contx, bytesize;
+let maxEndorseTime, maxOrdererTime, maxCommitTime, allEndorseTimes, allOrdererTimes, allCommitTimes;
+let worstEndorser, worstCommiter;
 
 module.exports.init = async function(blockchain, context, args) {
     bc = blockchain;
