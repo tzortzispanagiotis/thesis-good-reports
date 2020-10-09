@@ -74,8 +74,8 @@ module.exports.run = function() {
         chaincodeFunction: 'createAsset',
         chaincodeArguments: [uuid, JSON.stringify(asset)]
     };
-    let results =  bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs, 45);
-    for (let result of results) {
+    let result =  bc.bcObj.invokeSmartContract(contx, chaincodeID, undefined, myArgs, 45);
+    // for (let result of results) {
         let custom = result.GetCustomData();
         startTime = result.GetTimeCreate();
         endorseTime = custom.get('time_endorse');
@@ -100,11 +100,11 @@ module.exports.run = function() {
          allCommitTimes += (endTime - ordererAck);
  //result.GetCustomData().forEach(logMapElements);
  
-     }
+     
      //let customData = results.GetId();
      //customData.forEach(logMapElements);
      //console.log(customData);
-     return results;
+     return result;
  
 };
 
