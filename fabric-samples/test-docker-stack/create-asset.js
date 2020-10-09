@@ -116,5 +116,5 @@ module.exports.end = function() {
                     + (allOrdererTimes * 100 / allTimes) + '% time for orderer response, ' + (allCommitTimes * 100 / allTimes) + 'time in commit await');
     console.log('worst endorser custom data: '+worstEndorser);
     console.log('worst endorser custom data: '+worstCommiter);
-    return Promise.resolve();
+    //return Promise.resolve();
 };
