@@ -56,6 +56,44 @@ Organizations:
       - Host: peer0.org2.example.com 
         Port: 7051 
 
+  - &Org3
+      Name: Org3MSP
+      ID: Org3MSP
+      MSPDir: crypto-config/peerOrganizations/org3.example.com/msp
+      # AdminPrincipal: Role.ADMIN
+      Policies:
+          Readers:
+              Type: Signature
+              Rule: "OR('Org3MSP.admin', 'Org3MSP.peer', 'Org3MSP.client')"
+          Writers:
+              Type: Signature
+              Rule: "OR('Org3MSP.admin', 'Org3MSP.client')"
+          Admins:
+              Type: Signature
+              Rule: "OR('Org3MSP.admin')"
+      AnchorPeers:
+      - Host: peer0.org3.example.com 
+        Port: 7051 
+
+  - &Org4
+      Name: Org4MSP
+      ID: Org4MSP
+      MSPDir: crypto-config/peerOrganizations/org4.example.com/msp
+      # AdminPrincipal: Role.ADMIN
+      Policies:
+          Readers:
+              Type: Signature
+              Rule: "OR('Org4MSP.admin', 'Org4MSP.peer', 'Org4MSP.client')"
+          Writers:
+              Type: Signature
+              Rule: "OR('Org4MSP.admin', 'Org4MSP.client')"
+          Admins:
+              Type: Signature
+              Rule: "OR('Org4MSP.admin')"
+      AnchorPeers:
+      - Host: peer0.org4.example.com 
+        Port: 7051 
+
 Orderer: &OrdererDefaults
     OrdererType: solo
     Addresses:
@@ -217,6 +255,8 @@ Profiles:
                 Organizations:
                 - *Org1
                 - *Org2
+                - *Org3
+                - *Org4
     ChannelConfig:
         Consortium: SampleConsortium
         <<: *ChannelDefaults
@@ -225,5 +265,7 @@ Profiles:
             Organizations:
               - *Org1
               - *Org2
+              - *Org3
+              - *Org4
             Capabilities:
                 <<: *ApplicationCapabilities

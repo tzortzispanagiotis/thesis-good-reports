@@ -48,6 +48,30 @@ clients:
       clientSignedCert:
         path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
+  client0.org3.example.com:
+    client:
+      organization: Org3
+      credentialStore:
+        path: /tmp/hfc-kvs/org3
+        cryptoStore:
+          path: /tmp/hfc-cvs/org3
+      clientPrivateKey:
+        path: crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem        
+
+  client0.org4.example.com:
+    client:
+      organization: Org4
+      credentialStore:
+        path: /tmp/hfc-kvs/org4
+        cryptoStore:
+          path: /tmp/hfc-cvs/org4
+      clientPrivateKey:
+        path: crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/key.pem
+      clientSignedCert:
+        path: crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem
+
 
 channels:
   mychannel:
@@ -60,22 +84,34 @@ channels:
       peer1.org1.example.com:
        eventSource: true
        endorsingPeer: true
-      peer2.org1.example.com:
-       eventSource: true
-       endorsingPeer: true
-      peer3.org1.example.com:
-       eventSource: true
-       endorsingPeer: true
+      # peer2.org1.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
+      # peer3.org1.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
       peer0.org2.example.com:
        eventSource: true
        endorsingPeer: true
       peer1.org2.example.com:
        eventSource: true
        endorsingPeer: true
-      peer2.org2.example.com:
+      # peer2.org2.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
+      # peer3.org2.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
+      peer0.org3.example.com:
        eventSource: true
        endorsingPeer: true
-      peer3.org2.example.com:
+      peer1.org3.example.com:
+       eventSource: true
+       endorsingPeer: true
+      peer0.org4.example.com:
+       eventSource: true
+       endorsingPeer: true
+      peer1.org4.example.com:
        eventSource: true
        endorsingPeer: true
 
@@ -91,25 +127,48 @@ organizations:
     peers:
     - peer0.org1.example.com
     - peer1.org1.example.com
-    - peer2.org1.example.com
-    - peer3.org1.example.com
+    # - peer2.org1.example.com
+    # - peer3.org1.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
     signedCert:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
-
-
+      
   Org2:
     mspid: Org2MSP
     peers:
     - peer0.org2.example.com
     - peer1.org2.example.com
-    - peer2.org2.example.com
-    - peer3.org2.example.com
+    # - peer2.org2.example.com
+    # - peer3.org2.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
     signedCert:
       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+
+  Org3:
+    mspid: Org3MSP
+    peers:
+    - peer0.org3.example.com
+    - peer1.org3.example.com
+    # - peer2.org2.example.com
+    # - peer3.org2.example.com
+    adminPrivateKey:
+      path: crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/key.pem
+    signedCert:
+      path: crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem
+
+  Org4:
+    mspid: Org4MSP
+    peers:
+    - peer0.org4.example.com
+    - peer1.org4.example.com
+    # - peer2.org2.example.com
+    # - peer3.org2.example.com
+    adminPrivateKey:
+      path: crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/key.pem
+    signedCert:
+      path: crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org4.example.com-cert.pem
 
 
 peers:
@@ -129,21 +188,21 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
-  peer2.org1.example.com:
-    url: grpcs://192.168.0.4:12051
-    grpcOptions:
-      ssl-target-name-override: peer2.org1.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-      path:  crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+  # peer2.org1.example.com:
+  #   url: grpcs://192.168.0.4:12051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer2.org1.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
-  peer3.org1.example.com:
-    url: grpcs://192.168.0.10:13051
-    grpcOptions:
-      ssl-target-name-override: peer3.org1.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-      path:  crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+  # peer3.org1.example.com:
+  #   url: grpcs://192.168.0.10:13051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer3.org1.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
   peer0.org2.example.com:
     url: grpcs://192.168.0.13:8051
@@ -161,22 +220,54 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
-  peer2.org2.example.com:
-    url: grpcs://192.168.0.11:11051
+  # peer2.org2.example.com:
+  #   url: grpcs://192.168.0.11:11051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer2.org2.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org2.example.com/peers/peer2.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+
+  # peer3.org2.example.com:
+  #   url: grpcs://192.168.0.9:14051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer3.org2.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org2.example.com/peers/peer3.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+
+  peer0.org3.example.com:
+    url: grpcs://192.168.0.4:11051
     grpcOptions:
-      ssl-target-name-override: peer2.org2.example.com
+      ssl-target-name-override: peer0.org3.example.com
       grpc.keepalive_time_ms: 600000
     tlsCACerts:
-      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer2.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+      path:  crypto-config/peerOrganizations/org3.example.com/peers/peer0.org3.example.com/msp/tlscacerts/tlsca.org3.example.com-cert.pem
 
-  peer3.org2.example.com:
+  peer1.org3.example.com:
+    url: grpcs://192.168.0.10:12051
+    grpcOptions:
+      ssl-target-name-override: peer1.org3.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/msp/tlscacerts/tlsca.org3.example.com-cert.pem
+
+  peer0.org4.example.com:
+    url: grpcs://192.168.0.11:13051
+    grpcOptions:
+      ssl-target-name-override: peer0.org4.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org4.example.com/peers/peer0.org4.example.com/msp/tlscacerts/tlsca.org4.example.com-cert.pem
+
+  peer1.org4.example.com:
     url: grpcs://192.168.0.9:14051
     grpcOptions:
-      ssl-target-name-override: peer3.org2.example.com
+      ssl-target-name-override: peer1.org4.example.com
       grpc.keepalive_time_ms: 600000
     tlsCACerts:
-      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer3.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
-
+      path:  crypto-config/peerOrganizations/org4.example.com/peers/peer1.org4.example.com/msp/tlscacerts/tlsca.org4.example.com-cert.pem
+      
 orderers:
   orderer.example.com:
     url: grpcs://192.168.0.2:7050
