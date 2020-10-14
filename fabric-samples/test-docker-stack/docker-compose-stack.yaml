@@ -221,50 +221,50 @@ services:
             placement:
                 constraints: [node.hostname == node-7]
 
-    # peer1_org1_example_com:
-    #     image: hyperledger/fabric-peer:${FABRIC_VERSION}
-    #     environment:
-    #     - FABRIC_LOGGING_SPEC=INFO
-    #     - CORE_CHAINCODE_LOGGING_LEVEL=INFO
-    #     - CORE_CHAINCODE_LOGGING_SHIM=INFO
-    #     - CORE_CHAINCODE_EXECUTETIMEOUT=999999
-    #     - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
-    #     - CORE_PEER_ID=peer1.org1.example.com
-    #     - CORE_PEER_ENDORSER_ENABLED=true
-    #     - CORE_PEER_LOCALMSPID=Org1MSP
-    #     - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
-    #     - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/msp/
-    #     - CORE_PEER_ADDRESS=peer1.org1.example.com:7051
-    #     - CORE_PEER_GOSSIP_USELEADERELECTION=true
-    #     - CORE_PEER_GOSSIP_ORGLEADER=false
-    #     - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org1.example.com:7051
-    #     - CORE_PEER_TLS_ENABLED=true
-    #     - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/msp/peer/tls/server.key
-    #     - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/msp/peer/tls/server.crt
-    #     - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/msp/peer/tls/ca.crt
-    #     - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=first-network
-    #     - CORE_OPERATIONS_LISTENADDRESS=0.0.0.0:9443
-    #     - CORE_METRICS_PROVIDER=prometheus
-    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-    #     command: peer node start
-    #     ports:
-    #     - 9051:7051
-    #     - 9052:7052
-    #     - 9053:7053
+    peer1_org1_example_com:
+        image: hyperledger/fabric-peer:${FABRIC_VERSION}
+        environment:
+        - FABRIC_LOGGING_SPEC=INFO
+        - CORE_CHAINCODE_LOGGING_LEVEL=INFO
+        - CORE_CHAINCODE_LOGGING_SHIM=INFO
+        - CORE_CHAINCODE_EXECUTETIMEOUT=999999
+        - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+        - CORE_PEER_ID=peer1.org1.example.com
+        - CORE_PEER_ENDORSER_ENABLED=true
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
+        - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/msp/
+        - CORE_PEER_ADDRESS=peer1.org1.example.com:7051
+        - CORE_PEER_GOSSIP_USELEADERELECTION=true
+        - CORE_PEER_GOSSIP_ORGLEADER=false
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org1.example.com:7051
+        - CORE_PEER_TLS_ENABLED=true
+        - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/msp/peer/tls/server.key
+        - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/msp/peer/tls/server.crt
+        - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/msp/peer/tls/ca.crt
+        - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=first-network
+        - CORE_OPERATIONS_LISTENADDRESS=0.0.0.0:9443
+        - CORE_METRICS_PROVIDER=prometheus
+        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+        command: peer node start
+        ports:
+        - 9051:7051
+        - 9052:7052
+        - 9053:7053
 
-    #     # - 39443:9443
+        # - 39443:9443
 
-    #     volumes:
-    #     - /var/run/:/host/var/run/
-    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/:/etc/hyperledger/msp/peer
+        volumes:
+        - /var/run/:/host/var/run/
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/:/etc/hyperledger/msp/peer
 
-    #     networks:
-    #         first-network:
-    #             aliases:
-    #             - peer1.org1.example.com 
-    #     deploy:
-    #         placement:
-    #             constraints: [node.hostname == node-10]
+        networks:
+            first-network:
+                aliases:
+                - peer1.org1.example.com 
+        deploy:
+            placement:
+                constraints: [node.hostname == node-10]
 
     peer0_org2_example_com:
         image: hyperledger/fabric-peer:${FABRIC_VERSION}
@@ -311,50 +311,50 @@ services:
             placement:
                 constraints: [node.hostname == node-8]
                 
-    # peer1_org2_example_com:
-    #     image: hyperledger/fabric-peer:${FABRIC_VERSION}
-    #     environment:
-    #     - FABRIC_LOGGING_SPEC=INFO
-    #     - CORE_CHAINCODE_LOGGING_LEVEL=INFO
-    #     - CORE_CHAINCODE_LOGGING_SHIM=INFO
-    #     - CORE_CHAINCODE_EXECUTETIMEOUT=999999
-    #     - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
-    #     - CORE_PEER_ID=peer1.org2.example.com
-    #     - CORE_PEER_ENDORSER_ENABLED=true
-    #     - CORE_PEER_LOCALMSPID=Org2MSP
-    #     - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
-    #     - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/msp/
-    #     - CORE_PEER_ADDRESS=peer1.org2.example.com:7051
-    #     - CORE_PEER_GOSSIP_USELEADERELECTION=true
-    #     - CORE_PEER_GOSSIP_ORGLEADER=false
-    #     - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org2.example.com:7051
-    #     - CORE_PEER_TLS_ENABLED=true
-    #     - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/msp/peer/tls/server.key
-    #     - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/msp/peer/tls/server.crt
-    #     - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/msp/peer/tls/ca.crt
-    #     - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=first-network
-    #     - CORE_OPERATIONS_LISTENADDRESS=0.0.0.0:9443
-    #     - CORE_METRICS_PROVIDER=prometheus
-    #     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
-    #     command: peer node start
-    #     ports:
-    #     - 10051:7051
-    #     - 10052:7052
-    #     - 10053:7053
+    peer1_org2_example_com:
+        image: hyperledger/fabric-peer:${FABRIC_VERSION}
+        environment:
+        - FABRIC_LOGGING_SPEC=INFO
+        - CORE_CHAINCODE_LOGGING_LEVEL=INFO
+        - CORE_CHAINCODE_LOGGING_SHIM=INFO
+        - CORE_CHAINCODE_EXECUTETIMEOUT=999999
+        - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+        - CORE_PEER_ID=peer1.org2.example.com
+        - CORE_PEER_ENDORSER_ENABLED=true
+        - CORE_PEER_LOCALMSPID=Org2MSP
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
+        - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/msp/
+        - CORE_PEER_ADDRESS=peer1.org2.example.com:7051
+        - CORE_PEER_GOSSIP_USELEADERELECTION=true
+        - CORE_PEER_GOSSIP_ORGLEADER=false
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org2.example.com:7051
+        - CORE_PEER_TLS_ENABLED=true
+        - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/msp/peer/tls/server.key
+        - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/msp/peer/tls/server.crt
+        - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/msp/peer/tls/ca.crt
+        - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=first-network
+        - CORE_OPERATIONS_LISTENADDRESS=0.0.0.0:9443
+        - CORE_METRICS_PROVIDER=prometheus
+        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+        command: peer node start
+        ports:
+        - 10051:7051
+        - 10052:7052
+        - 10053:7053
  
-    #     # - 40443:9443
+        # - 40443:9443
 
-    #     volumes:
-    #     - /var/run/:/host/var/run/
-    #     - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/msp/peer
+        volumes:
+        - /var/run/:/host/var/run/
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/msp/peer
       
-    #     networks:
-    #         first-network:
-    #             aliases:
-    #             - peer1.org2.example.com 
-    #     deploy:
-    #         placement:
-    #             constraints: [node.hostname == node-9]
+        networks:
+            first-network:
+                aliases:
+                - peer1.org2.example.com 
+        deploy:
+            placement:
+                constraints: [node.hostname == node-9]
                 
     cli:
       image: hyperledger/fabric-tools:${FABRIC_VERSION}
