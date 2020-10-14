@@ -36,17 +36,17 @@ clients:
       clientSignedCert:
         path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
-  client0.org2.example.com:
-    client:
-      organization: Org2
-      credentialStore:
-        path: /tmp/hfc-kvs/org2
-        cryptoStore:
-          path: /tmp/hfc-cvs/org2
-      clientPrivateKey:
-        path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
-      clientSignedCert:
-        path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+  # client0.org2.example.com:
+  #   client:
+  #     organization: Org2
+  #     credentialStore:
+  #       path: /tmp/hfc-kvs/org2
+  #       cryptoStore:
+  #         path: /tmp/hfc-cvs/org2
+  #     clientPrivateKey:
+  #       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
+  #     clientSignedCert:
+  #       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
 
 channels:
@@ -60,12 +60,12 @@ channels:
       peer1.org1.example.com:
        eventSource: true
        endorsingPeer: true
-      peer0.org2.example.com:
-       eventSource: true
-       endorsingPeer: true
-      peer1.org2.example.com:
-       eventSource: true
-       endorsingPeer: true
+      # peer0.org2.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
+      # peer1.org2.example.com:
+      #  eventSource: true
+      #  endorsingPeer: true
 
     chaincodes:
      - id: fixed-asset
@@ -85,15 +85,15 @@ organizations:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
 
-  Org2:
-    mspid: Org2MSP
-    peers:
-    - peer0.org2.example.com
-    - peer1.org2.example.com
-    adminPrivateKey:
-      path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
-    signedCert:
-      path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
+  # Org2:
+  #   mspid: Org2MSP
+  #   peers:
+  #   - peer0.org2.example.com
+  #   - peer1.org2.example.com
+  #   adminPrivateKey:
+  #     path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
+  #   signedCert:
+  #     path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
 
 peers:
@@ -113,21 +113,21 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
-  peer0.org2.example.com:
-    url: grpcs://192.168.0.13:8051
-    grpcOptions:
-      ssl-target-name-override: peer0.org2.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+  # peer0.org2.example.com:
+  #   url: grpcs://192.168.0.13:8051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer0.org2.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
-  peer1.org2.example.com:
-    url: grpcs://192.168.0.14:10051
-    grpcOptions:
-      ssl-target-name-override: peer1.org2.example.com
-      grpc.keepalive_time_ms: 600000
-    tlsCACerts:
-      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+  # peer1.org2.example.com:
+  #   url: grpcs://192.168.0.14:10051
+  #   grpcOptions:
+  #     ssl-target-name-override: peer1.org2.example.com
+  #     grpc.keepalive_time_ms: 600000
+  #   tlsCACerts:
+  #     path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
 orderers:
   orderer.example.com:

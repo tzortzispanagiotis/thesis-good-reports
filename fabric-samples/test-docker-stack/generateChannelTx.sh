@@ -13,5 +13,5 @@ mkdir channel-artifacts
 
 ../bin/configtxgen -profile ChannelConfig -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID mychannel -asOrg Org1MSP
 
-../bin/configtxgen -profile ChannelConfig -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID mychannel -asOrg Org2MSP
+# ../bin/configtxgen -profile ChannelConfig -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID mychannel -asOrg Org2MSP
 
