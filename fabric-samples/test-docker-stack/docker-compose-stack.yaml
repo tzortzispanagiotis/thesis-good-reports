@@ -529,7 +529,7 @@ services:
         networks:
             first-network:
                 aliases:
-                - peer1.org2.example.com 
+                - peer3.org2.example.com 
         deploy:
             placement:
                 constraints: [node.hostname == node-1-new]
