@@ -479,7 +479,7 @@ services:
 
         volumes:
         - /var/run/:/host/var/run/
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/msp/peer
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer2.org2.example.com/:/etc/hyperledger/msp/peer
       
         networks:
             first-network:
@@ -524,7 +524,7 @@ services:
 
         volumes:
         - /var/run/:/host/var/run/
-        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/msp/peer
+        - /home/user/thesis-good-reports/fabric-samples/test-docker-stack/crypto-config/peerOrganizations/org2.example.com/peers/peer3.org2.example.com/:/etc/hyperledger/msp/peer
       
         networks:
             first-network:
