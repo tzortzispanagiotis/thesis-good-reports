@@ -60,10 +60,22 @@ channels:
       peer1.org1.example.com:
        eventSource: true
        endorsingPeer: true
+      peer2.org1.example.com:
+       eventSource: true
+       endorsingPeer: true
+      peer3.org1.example.com:
+       eventSource: true
+       endorsingPeer: true
       peer0.org2.example.com:
        eventSource: true
        endorsingPeer: true
       peer1.org2.example.com:
+       eventSource: true
+       endorsingPeer: true
+      peer2.org2.example.com:
+       eventSource: true
+       endorsingPeer: true
+      peer3.org2.example.com:
        eventSource: true
        endorsingPeer: true
 
@@ -79,6 +91,8 @@ organizations:
     peers:
     - peer0.org1.example.com
     - peer1.org1.example.com
+    - peer2.org1.example.com
+    - peer3.org1.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
     signedCert:
@@ -90,6 +104,8 @@ organizations:
     peers:
     - peer0.org2.example.com
     - peer1.org2.example.com
+    - peer2.org2.example.com
+    - peer3.org2.example.com
     adminPrivateKey:
       path: crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/key.pem
     signedCert:
@@ -113,6 +129,22 @@ peers:
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
 
+  peer2.org1.example.com:
+    url: grpcs://192.168.0.4:12051
+    grpcOptions:
+      ssl-target-name-override: peer2.org1.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+
+  peer3.org1.example.com:
+    url: grpcs://192.168.0.10:13051
+    grpcOptions:
+      ssl-target-name-override: peer3.org1.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem
+
   peer0.org2.example.com:
     url: grpcs://192.168.0.13:8051
     grpcOptions:
@@ -128,6 +160,22 @@ peers:
       grpc.keepalive_time_ms: 600000
     tlsCACerts:
       path:  crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+
+  peer2.org2.example.com:
+    url: grpcs://192.168.0.11:11051
+    grpcOptions:
+      ssl-target-name-override: peer2.org2.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer2.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
+
+  peer3.org2.example.com:
+    url: grpcs://192.168.0.9:14051
+    grpcOptions:
+      ssl-target-name-override: peer3.org2.example.com
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  crypto-config/peerOrganizations/org2.example.com/peers/peer3.org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem
 
 orderers:
   orderer.example.com:
